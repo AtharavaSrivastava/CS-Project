@@ -1,3 +1,5 @@
+#Line 383, how to display the availabe record?
+
 #Importing required libraries
 import tkinter as tk
 from tkinter import StringVar
@@ -30,21 +32,22 @@ check_database_existence()
 
 #Re-opening the menu window whenever the close button is clicked.
 def recreate_root():
+    global root
     root=tk.Tk()
     root.geometry('690x350')
-    root.configure(bg='#cc0066')
+    root.configure(bg='#42c8f5')
     root.title('Menu')
-    lab3=tk.Label(root, text="WELCOME TO BLOCKBUSTER: A Movie Database",font=('Cascadia Mono SemiLight',16,'bold'),bg='#cc0066')
-    lab6=tk.Label(root, text="Made By: Atharava Srivastava",font=('Cascadia Mono SemiLight',16,'bold'),bg='#cc0066')
+    lab3=tk.Label(root, text="WELCOME TO BLOCKBUSTER: A Movie Database",font=('Cascadia Mono SemiLight',16,'bold'),bg='#42c8f5')
+    lab6=tk.Label(root, text="Made By: Atharava Srivastava",font=('Cascadia Mono SemiLight',16,'bold'),bg='#42c8f5')
     lab3.pack()  
     lab6.pack()    
 
-    lin1=tk.Label(root,text="1.Insert new records",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-    lin2=tk.Label(root,text="2.Update a record",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-    lin3=tk.Label(root,text="3.Delete a record",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-    lin4=tk.Label(root,text="4.Search a record",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-    lin5=tk.Label(root,text="5.Display the data",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-    lin6=tk.Label(root,text="6.Quit",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
+    lin1=tk.Label(root,text="1.Insert new records",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+    lin2=tk.Label(root,text="2.Update a record",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+    lin3=tk.Label(root,text="3.Delete a record",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+    lin4=tk.Label(root,text="4.Search a record",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+    lin5=tk.Label(root,text="5.Display the data",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+    lin6=tk.Label(root,text="6.Quit",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
 
     lin1.place(x=10,y=80)
     lin2.place(x=10,y=110)
@@ -55,7 +58,7 @@ def recreate_root():
 
     ch=StringVar()
        
-    lab1=tk.Label(root,text="Which function do you want to apply?:",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
+    lab1=tk.Label(root,text="Which function do you want to apply?:",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
     lab1.place(x=10,y=260)
 
     en1=tk.Entry(root, textvariable=ch, font=('Cascadia Mono SemiLight',14))
@@ -89,16 +92,16 @@ def recreate_root():
         elif choice=='6':
             exit_=tk.Tk()
             exit_.geometry('500x100')
-            exit_.config(bg='#cc0066')
+            exit_.config(bg='#42c8f5')
             exit_.title('Exit')
-            label_0=tk.Label(exit_, text="Thank You!",font=('Cascadia Mono SemiLight',16,'bold'),bg='#cc0066')
-            label_1=tk.Label(exit_, text="Hope you have a nice day!",font=('Cascadia Mono SemiLight',16,'bold'),bg='#cc0066')
+            label_0=tk.Label(exit_, text="Thank You!",font=('Cascadia Mono SemiLight',16,'bold'),bg='#42c8f5')
+            label_1=tk.Label(exit_, text="Hope you have a nice day!",font=('Cascadia Mono SemiLight',16,'bold'),bg='#42c8f5')
             label_0.pack()
             label_1.pack()
             root.destroy()
         #Invaild input
         else:
-            lab2=tk.Label(root,text="Please Enter Valid Input!",font=('Cascadia Mono SemiLight',15),bg='#cc0066')
+            lab2=tk.Label(root,text="Please Enter Valid Input!",font=('Cascadia Mono SemiLight',15),bg='#42c8f5')
             lab2.place(x=170,y=300)
             ch.set('')
     
@@ -117,17 +120,17 @@ def insert():
     #Opening a tk page for insert menu item
     insertk=tk.Tk()  
     insertk.geometry('850x380')
-    insertk.configure(bg='#cc0066')
+    insertk.configure(bg='#42c8f5')
     insertk.title('Insert Record')
     
     #Creating labels 
-    lab0=tk.Label(insertk,text='Fill out the below information',bg='#cc0066',font=('Cascadia Mono SemiLight',18,'bold'))
-    lab1=tk.Label(insertk,text="Name of the Movie :",bg='#cc0066',font=('Cascadia Mono SemiLight',14))
-    lab2=tk.Label(insertk,text="Genre of the Movie:",bg='#cc0066',font=('Cascadia Mono SemiLight',14))
-    lab3=tk.Label(insertk,text="Date of Releae of the Movie (in YYYY-MM-DD format):",bg='#cc0066',font=('Cascadia Mono SemiLight',14))
-    lab4=tk.Label(insertk,text="IMDB ID:",bg='#cc0066',font=('Cascadia Mono SemiLight',14))
-    lab5=tk.Label(insertk,text="Movie Director:",bg='#cc0066',font=('Cascadia Mono SemiLight',14))
-    lab6=tk.Label(insertk,text="IMDB Rating:",bg='#cc0066',font=('Cascadia Mono SemiLight',14))
+    lab0=tk.Label(insertk,text='Fill out the below information',bg='#42c8f5',font=('Cascadia Mono SemiLight',18,'bold'))
+    lab1=tk.Label(insertk,text="Name of the Movie :",bg='#42c8f5',font=('Cascadia Mono SemiLight',14))
+    lab2=tk.Label(insertk,text="Genre of the Movie:",bg='#42c8f5',font=('Cascadia Mono SemiLight',14))
+    lab3=tk.Label(insertk,text="Date of Releae of the Movie (in YYYY-MM-DD format):",bg='#42c8f5',font=('Cascadia Mono SemiLight',14))
+    lab4=tk.Label(insertk,text="IMDB ID:",bg='#42c8f5',font=('Cascadia Mono SemiLight',14))
+    lab5=tk.Label(insertk,text="Movie Director:",bg='#42c8f5',font=('Cascadia Mono SemiLight',14))
+    lab6=tk.Label(insertk,text="IMDB Rating:",bg='#42c8f5',font=('Cascadia Mono SemiLight',14))
     
     #Placing the labels
     lab0.pack()
@@ -179,7 +182,7 @@ def insert():
         mycursor.execute(sql, val)
         mydb.commit()
         
-        added=tk.Label(insertk,text='Record Inserted',font=('Cascadia Mono SemiLight',20),bg='#cc0066')
+        added=tk.Label(insertk,text='Record Inserted',font=('Cascadia Mono SemiLight',20),bg='#42c8f5')
         added.place(x=300,y=295)
         
         nm.set('')
@@ -207,21 +210,21 @@ def insert():
 def update():
     root.destroy()
     updatetk=tk.Tk()
-    updatetk.geometry('750x400')
-    updatetk.configure(bg='#cc0066')
+    updatetk.geometry('750x380')
+    updatetk.configure(bg='#42c8f5')
     updatetk.title('Update Record')
     
     #Creating labels 
-    lab0=tk.Label(updatetk,text='Update Record',font=('Cascadia Mono SemiLight',18,'bold'),bg='#cc0066')
-    lab1=tk.Label(updatetk,text='--> 1. Movie name ',font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-    lab2=tk.Label(updatetk,text='--> 2. Genre',font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-    lab3=tk.Label(updatetk,text='--> 3. Date of Release',font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-    lab4=tk.Label(updatetk,text='--> 4. IMDB Id',font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-    lab5=tk.Label(updatetk,text='--> 5. Director',font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-    lab9=tk.Label(updatetk,text='--> 6. IMDB Rating',font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-    lab6=tk.Label(updatetk,text="Movie name whose record you want to update:",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-    lab7=tk.Label(updatetk,text="Record you want to update:",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-    lab8=tk.Label(updatetk,text="Enter the change:",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
+    lab0=tk.Label(updatetk,text='Update Record',font=('Cascadia Mono SemiLight',18,'bold'),bg='#42c8f5')
+    lab1=tk.Label(updatetk,text='--> 1. Movie name ',font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+    lab2=tk.Label(updatetk,text='--> 2. Genre',font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+    lab3=tk.Label(updatetk,text='--> 3. Date of Release',font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+    lab4=tk.Label(updatetk,text='--> 4. IMDB Id',font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+    lab5=tk.Label(updatetk,text='--> 5. Director',font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+    lab9=tk.Label(updatetk,text='--> 6. IMDB Rating',font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+    lab6=tk.Label(updatetk,text="Movie name whose record you want to update:",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+    lab7=tk.Label(updatetk,text="Record you want to update:",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+    lab8=tk.Label(updatetk,text="Enter the change:",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
 
     #Placing the labels
     lab0.pack()
@@ -253,7 +256,7 @@ def update():
     #Quries for updating data in MySQL table)
     def updateit(event=None):
         up=upe.get()
-        fields=int(fi.get())-1
+        fields=int(fi.get())
         fieldch=fich.get()
         if fields==1:
             field='Movie_Name'
@@ -262,16 +265,18 @@ def update():
         elif fields==3:
             field='Date_of_release'
         elif fields==4:
-            field='Director'
+            field='IMDB_id'
         elif fields==5:
+            field='Director'
+        elif fields==6:
             field='Rating'
         mydb= sq.connect(host="localhost",user="root",passwd="root",database="Movie_database")
         cursor=mydb.cursor()
         update="UPDATE Movies set {} = '{}' WHERE Movie_Name like '{}'".format(field,fieldch,up)
         cursor.execute(update)
         mydb.commit()
-        lab0=tk.Label(updatetk,text="Record Updated",font=('Cascadia Mono SemiLight',24),bg='#cc0066')
-        lab0.place(x=250,y=410)
+        lab0=tk.Label(updatetk,text="Record Updated!",font=('Cascadia Mono SemiLight',24),bg='#42c8f5')
+        lab0.place(x=240,y=325)
         upe.set('')
         fi.set('')
         fich.set('')
@@ -295,12 +300,12 @@ def delete():
     root.destroy()
     deletetk=tk.Tk()        
     deletetk.geometry('850x120')
-    deletetk.configure(bg='#cc0066')
+    deletetk.configure(bg='#42c8f5')
     deletetk.title('Delete Record')
 
     #Creating labels 
-    lab0=tk.Label(deletetk,text="Delete Record",font=('Cascadia Mono SemiLight',18,'bold'),bg='#cc0066')
-    lab1=tk.Label(deletetk,text="Enter the Movie name whose data you want to delete:",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
+    lab0=tk.Label(deletetk,text="Delete Record",font=('Cascadia Mono SemiLight',18,'bold'),bg='#42c8f5')
+    lab1=tk.Label(deletetk,text="Enter the Movie name whose data you want to delete:",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
     
     #Placing the labels
     lab0.pack()
@@ -323,7 +328,7 @@ def delete():
         sql="DELETE FROM Movies WHERE Movie_Name like '%{}%'".format(dele)
         cursor.execute(sql)
         c.commit()
-        lab2=tk.Label(deletetk,text="Record Deleted",font=('Cascadia Mono SemiLight',15,'bold'),bg='#cc0066')
+        lab2=tk.Label(deletetk,text="Record Deleted",font=('Cascadia Mono SemiLight',15,'bold'),bg='#42c8f5')
         lab2.place(x=320,y=80)
         de.set('')
 
@@ -346,24 +351,25 @@ def search():
     searchtk=tk.Tk()
     searchtk.geometry('425x150')
     searchtk.title('Search Record')
-    searchtk.configure(bg='#cc0066')
+    searchtk.configure(bg='#42c8f5')
 
     #Creating label
-    lab1=tk.Label(searchtk,text="Search Record",font=('Arial',18,'bold'),bg='#cc0066')
-    lab2=tk.Label(searchtk,text="Movie Name:",font=('Arial',14),bg='#cc0066')
+    lab1=tk.Label(searchtk,text="Search Record",font=('Arial',18,'bold'),bg='#42c8f5')
+    lab2=tk.Label(searchtk,text="Movie Name:",font=('Arial',14),bg='#42c8f5')
     #Placing the label
     lab1.pack()
     lab2.place(x=10,y=50)   
 
     #Initialising a variable to read entry box
     se=StringVar()
+    output=StringVar()
     
     #Creating entry box
     en1=tk.Entry(searchtk,textvariable=se,font=('Arial',14))
-    
+    en2=tk.Entry(searchtk,textvariable=output,font=('Arial',14),bg='#42c8f5',relief='flat')
     #Placing the entry box
     en1.place(x=130,y=50)
-
+    en2.place(x=100,y=90)
     #Quries for searching data in MySQL table using movie name)
     def searchit(event=None):
         try:
@@ -375,11 +381,10 @@ def search():
             result=cursor.fetchall()
 
             if result:
-                lab2=tk.Label(searchtk, text='Record is available', font=('Arial', 18), bg='#cc0066')
-                lab2.place(x=100,y=80)
+                output.set('Record is available.')
+                ############################################################################################################################################
             else:
-                lab2=tk.Label(searchtk, text='Record is not available', font=('Arial', 18), bg='#cc0066')
-                lab2.place(x=100,y=80)
+                output.set('Record is not available.')
         except Exception as e:
             print(f"Error: {e}")
     searchtk.bind_all('<Return>',searchit)
@@ -398,7 +403,7 @@ def search():
 def display():
     root.destroy()
     displaytk=tk.Tk()
-    displaytk.configure(bg='#cc0066')
+    displaytk.configure(bg='#42c8f5')
     displaytk.geometry('1000x550')
     displaytk.title('Display Record')
 
@@ -410,13 +415,13 @@ def display():
     myresult=cursor.fetchall()
 
     #Creating a frame
-    container=tk.Frame(displaytk, bg='#cc0066')
+    container=tk.Frame(displaytk, bg='#42c8f5')
     container.pack(fill='both', expand=True)
 
     #Creating the canvas and the scrollbar
-    canvas = tk.Canvas(container, bg='#cc0066')
+    canvas = tk.Canvas(container, bg='#42c8f5')
     scrollbar = tk.Scrollbar(container, orient='vertical', command=canvas.yview)
-    scrollable_frame = tk.Frame(canvas, bg='#cc0066')
+    scrollable_frame = tk.Frame(canvas, bg='#42c8f5')
 
     #Configuring the scrollable frame
     scrollable_frame.bind("<Configure>",lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
@@ -426,12 +431,12 @@ def display():
     #Adding the header labels
     header_labels = ['Movie Name', 'Genre', 'Date of Release', 'IMDB Id', 'Director', 'Rating']
     for i, header in enumerate(header_labels):
-        tk.Label(scrollable_frame, text=header, font=('Cascadia Mono SemiLight', 16), bg='#cc0066').grid(row=0, column=i, padx=10, pady=10)
+        tk.Label(scrollable_frame, text=header, font=('Cascadia Mono SemiLight', 16), bg='#42c8f5').grid(row=0, column=i, padx=10, pady=10)
 
     #Adding movie records in rows
     for i, record in enumerate(myresult):
         for j, value in enumerate(record):
-            tk.Label(scrollable_frame, text=value, font=('Cascadia Mono SemiLight', 14), bg='#cc0066').grid(row=i+1, column=j, padx=10, pady=5)
+            tk.Label(scrollable_frame, text=value, font=('Cascadia Mono SemiLight', 14), bg='#42c8f5').grid(row=i+1, column=j, padx=10, pady=5)
 
     #Placing the canvas and the scrollbar
     canvas.pack(side="left", fill="both", expand=True)
@@ -451,19 +456,19 @@ def display():
 #Root window
 root=tk.Tk()
 root.geometry('690x350')
-root.configure(bg='#cc0066')
+root.configure(bg='#42c8f5')
 root.title('Menu')
-lab3=tk.Label(root, text="WELCOME TO BLOCKBUSTER: A Movie Database",font=('Cascadia Mono SemiLight',16,'bold'),bg='#cc0066')
-lab6=tk.Label(root, text="Made By: Atharava Srivastava",font=('Cascadia Mono SemiLight',16,'bold'),bg='#cc0066')
+lab3=tk.Label(root, text="WELCOME TO BLOCKBUSTER: A Movie Database",font=('Cascadia Mono SemiLight',16,'bold'),bg='#42c8f5')
+lab6=tk.Label(root, text="Made By: Atharava Srivastava",font=('Cascadia Mono SemiLight',16,'bold'),bg='#42c8f5')
 lab3.pack()  
 lab6.pack()    
 
-lin1=tk.Label(root,text="1.Insert new data ",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-lin2=tk.Label(root,text="2.Update the table",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-lin3=tk.Label(root,text="3.Delete the record from the table",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-lin4=tk.Label(root,text="4.Search a record from the table",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-lin5=tk.Label(root,text="5.Display the table",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
-lin6=tk.Label(root,text="6.Quit",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
+lin1=tk.Label(root,text="1.Insert new data ",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+lin2=tk.Label(root,text="2.Update the table",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+lin3=tk.Label(root,text="3.Delete the record from the table",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+lin4=tk.Label(root,text="4.Search a record from the table",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+lin5=tk.Label(root,text="5.Display the table",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
+lin6=tk.Label(root,text="6.Quit",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
 
 lin1.place(x=10,y=80)
 lin2.place(x=10,y=110)
@@ -474,7 +479,7 @@ lin6.place(x=10,y=230)
 
 ch=StringVar()
    
-lab1=tk.Label(root,text="Which function do you want to apply?:",font=('Cascadia Mono SemiLight',14),bg='#cc0066')
+lab1=tk.Label(root,text="Which function do you want to apply?:",font=('Cascadia Mono SemiLight',14),bg='#42c8f5')
 lab1.place(x=10,y=260)
 en1=tk.Entry(root, textvariable=ch, font=('Cascadia Mono SemiLight',14))
 en1.place(x=420,y=263)
@@ -507,19 +512,19 @@ def choicefunc(event=None):
     elif choice=='6':
         exit_=tk.Tk()
         exit_.geometry('500x100')
-        exit_.config(bg='#cc0066')
+        exit_.config(bg='#42c8f5')
         exit_.title('Exit')
-        label_0=tk.Label(exit_, text="Thank You!",font=('Cascadia Mono SemiLight',16,'bold'),bg='#cc0066')
-        label_1=tk.Label(exit_, text="Hope you have a nice day!",font=('Cascadia Mono SemiLight',16,'bold'),bg='#cc0066')
+        label_0=tk.Label(exit_, text="Thank You!",font=('Cascadia Mono SemiLight',16,'bold'),bg='#42c8f5')
+        label_1=tk.Label(exit_, text="Hope you have a nice day!",font=('Cascadia Mono SemiLight',16,'bold'),bg='#42c8f5')
         label_0.pack()
         label_1.pack()
         root.destroy()
     #Invaild input
     else:
-        lab2=tk.Label(root,text="Please Enter Valid Input!",font=('Cascadia Mono SemiLight',15),bg='#cc0066')
+        lab2=tk.Label(root,text="Please Enter Valid Input!",font=('Cascadia Mono SemiLight',15),bg='#42c8f5')
         lab2.place(x=170,y=300)
         ch.set('')
         
 en1.bind('<Return>',choicefunc)
 
-root.mainloop()
+
